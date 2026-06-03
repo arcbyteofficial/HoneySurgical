@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 35% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 18%;
+    --primary: 122 52% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 122 20% 96%;
+    --secondary-foreground: 215 35% 18%;
+    --muted: 122 15% 96%;
+    --muted-foreground: 215 15% 45%;
+    --accent: 138 60% 94%;
+    --accent-foreground: 215 35% 18%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 122 15% 88%;
+    --input: 122 15% 88%;
+    --ring: 122 52% 47%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  ::selection {
+    @apply bg-medical-pale text-medical-deep;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+
+  .section-band {
+    @apply border-y border-border bg-medical-grey/50;
+  }
+}
