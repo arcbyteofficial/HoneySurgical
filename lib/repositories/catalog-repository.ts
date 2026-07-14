@@ -31,15 +31,44 @@ type ProductSearchOptions = ProductFilters & {
 
 // Helper to convert Mongoose documents to raw JSON objects without _id/ObjectId complexities for Next.js Client Components
 function serializeDoc<T>(doc: any): T {
-  const json = doc.toObject ? doc.toObject({ getters: true, virtuals: true }) : doc;
-  if (json._id) {
-    json.id = json._id.toString();
-    delete json._id;
+  if (doc === null || doc === undefined) {
+    return doc;
   }
-  if (json.__v !== undefined) {
-    delete json.__v;
+
+  // Handle arrays
+  if (Array.isArray(doc)) {
+    return doc.map((item) => serializeDoc(item)) as any;
   }
-  return json as T;
+
+  // Handle MongoDB ObjectId
+  if (doc instanceof mongoose.Types.ObjectId || (doc._bsontype && doc._bsontype === "ObjectID")) {
+    return doc.toString() as any;
+  }
+
+  // Handle Date objects
+  if (doc instanceof Date) {
+    return doc.toISOString() as any;
+  }
+
+  // Handle objects
+  if (typeof doc === "object") {
+    const json = doc.toObject ? doc.toObject({ getters: true, virtuals: true }) : { ...doc };
+    if (json._id) {
+      json.id = json._id.toString();
+      delete json._id;
+    }
+    if (json.__v !== undefined) {
+      delete json.__v;
+    }
+
+    // Recursively serialize properties
+    for (const key of Object.keys(json)) {
+      json[key] = serializeDoc(json[key]);
+    }
+    return json as T;
+  }
+
+  return doc;
 }
 
 export async function getAllCategories(): Promise<Category[]> {
