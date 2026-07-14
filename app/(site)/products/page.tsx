@@ -8,10 +8,15 @@ import {
   searchProducts
 } from "@/lib/repositories/catalog-repository";
 import type { ProductFilters } from "@/lib/types/catalog";
+import { BreadcrumbsJsonLd } from "@/components/seo/json-ld";
+import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Products",
-  description: "Search HONEY SURGICALS products by name, category, SKU, brand, keywords, and price."
+  title: "Surgical Products Catalog & Medical Supplies",
+  description: "Browse and search our wholesale catalog of medical disposables, surgical instruments, diagnostic equipment, and hospital furniture. Sourcing made simple for healthcare institutions.",
+  alternates: {
+    canonical: "/products"
+  }
 };
 
 type PageProps = {
@@ -37,8 +42,14 @@ export default async function ProductsPage({ searchParams }: PageProps) {
     getAllBrands()
   ]);
 
+  const breadcrumbItems = [
+    { name: "Home", item: siteConfig.url },
+    { name: "Products", item: `${siteConfig.url}/products` }
+  ];
+
   return (
     <section className="bg-white">
+      <BreadcrumbsJsonLd items={breadcrumbItems} />
       <div className="container grid gap-6 py-10">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>

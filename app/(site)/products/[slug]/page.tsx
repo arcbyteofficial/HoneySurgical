@@ -13,6 +13,7 @@ import {
 } from "@/lib/repositories/catalog-repository";
 import { siteConfig } from "@/lib/config/site";
 import { formatCurrency } from "@/lib/utils";
+import { BreadcrumbsJsonLd } from "@/components/seo/json-ld";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -26,13 +27,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: "Product Not Found" };
   }
 
+  const titleText = `${product.name} | Sourcing & Wholesale Price`;
+  const descText = `${product.shortDescription || product.description}. Get bulk quotes for ${product.name} (${product.sku}). Check key specifications, brand details, and buy wholesale from HONEY SURGICALS.`;
+
   return {
-    title: product.name,
-    description: product.shortDescription,
+    title: titleText,
+    description: descText,
+    alternates: {
+      canonical: `/products/${product.slug}`
+    },
     openGraph: {
-      title: product.name,
-      description: product.shortDescription,
-      images: product.images[0]?.url ? [product.images[0].url] : []
+      title: titleText,
+      description: descText,
+      url: `${siteConfig.url}/products/${product.slug}`,
+      images: product.images[0]?.url ? [product.images[0].url] : ["/logo.jpeg"]
     }
   };
 }
@@ -56,9 +64,13 @@ export default async function ProductDetailsPage({ params }: PageProps) {
     "@type": "Product",
     name: product.name,
     sku: product.sku,
-    brand: product.brand.name,
+    mpn: product.sku,
+    brand: {
+      "@type": "Brand",
+      name: product.brand.name
+    },
     category: product.category.name,
-    description: product.description,
+    description: product.description || product.shortDescription,
     image: product.images.map((image) => image.url),
     offers: {
       "@type": "Offer",
@@ -69,8 +81,16 @@ export default async function ProductDetailsPage({ params }: PageProps) {
     }
   };
 
+  const breadcrumbItems = [
+    { name: "Home", item: siteConfig.url },
+    { name: "Categories", item: `${siteConfig.url}/categories` },
+    { name: product.category.name, item: `${siteConfig.url}/categories/${product.category.slug}` },
+    { name: product.name, item: `${siteConfig.url}/products/${product.slug}` }
+  ];
+
   return (
     <section className="bg-white">
+      <BreadcrumbsJsonLd items={breadcrumbItems} />
       <script
         type="application/ld+json"
         suppressHydrationWarning

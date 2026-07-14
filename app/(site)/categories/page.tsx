@@ -1,17 +1,28 @@
 import type { Metadata } from "next";
 import { CategoryCard } from "@/components/catalog/category-card";
 import { getCategoryTree } from "@/lib/repositories/catalog-repository";
+import { BreadcrumbsJsonLd } from "@/components/seo/json-ld";
+import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Categories",
-  description: "Browse the complete HONEY SURGICALS product category hierarchy."
+  title: "Medical & Surgical Product Categories",
+  description: "Browse our complete directory of surgical instruments, medical disposables, diagnostics, dental products, hospital furniture, and laboratory equipment.",
+  alternates: {
+    canonical: "/categories"
+  }
 };
 
 export default async function CategoriesPage() {
   const categories = await getCategoryTree();
 
+  const breadcrumbItems = [
+    { name: "Home", item: siteConfig.url },
+    { name: "Categories", item: `${siteConfig.url}/categories` }
+  ];
+
   return (
     <section className="bg-white">
+      <BreadcrumbsJsonLd items={breadcrumbItems} />
       <div className="container grid gap-8 py-10">
         <div>
           <h1 className="text-3xl font-bold tracking-normal text-medical-deep">Product Categories</h1>

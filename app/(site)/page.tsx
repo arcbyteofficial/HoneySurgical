@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Headphones, MapPin, Medal, ShieldCheck, Tags } from "lucide-react";
 import { BannerSlider } from "@/components/home/banner-slider";
@@ -9,6 +10,14 @@ import { ProductCard } from "@/components/catalog/product-card";
 import { SearchBox } from "@/components/catalog/search-box";
 import { getFeaturedCategories, getFeaturedProducts, searchProducts } from "@/lib/repositories/catalog-repository";
 import { siteConfig } from "@/lib/config/site";
+
+export const metadata: Metadata = {
+  title: "HONEY SURGICALS – Premium Medical & Surgical Sourcing Catalog",
+  description: "HONEY SURGICALS is a leading supplier of surgical products, hospital furniture, diagnostics, rehabilitation aids, and disposable medical supplies. Request bulk quotes online.",
+  alternates: {
+    canonical: "/"
+  }
+};
 
 const reasons = [
   { title: "Trusted Supplier", text: "Trusted sourcing for hospitals, clinics, laboratories, and distributors.", icon: ShieldCheck },
