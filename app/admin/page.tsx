@@ -5,6 +5,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { requireAdmin } from "@/lib/auth/admin";
 import { getDashboardMetrics } from "@/lib/repositories/catalog-repository";
 import { formatCurrency } from "@/lib/utils";
+import { SeedButton } from "@/components/admin/seed-button";
 
 const widgetIcons = [Boxes, FolderTree, Inbox, TrendingUp];
 
@@ -20,9 +21,12 @@ export default async function AdminDashboardPage() {
   return (
     <AdminShell session={session}>
       <div className="grid gap-6">
-        <div>
-          <h1 className="text-3xl font-bold tracking-normal text-medical-deep">Dashboard</h1>
-          <p className="mt-2 text-muted-foreground">Operational overview for catalog, inquiry, and product analytics.</p>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h1 className="text-3xl font-bold tracking-normal text-medical-deep">Dashboard</h1>
+            <p className="mt-2 text-muted-foreground">Operational overview for catalog, inquiry, and product analytics.</p>
+          </div>
+          <SeedButton />
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
