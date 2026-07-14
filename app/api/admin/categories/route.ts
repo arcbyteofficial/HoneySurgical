@@ -7,10 +7,10 @@ import { slugify } from "@/lib/utils";
 import mongoose from "mongoose";
 
 const categorySchema = z.object({
-  name: z.string().min(2),
+  name: z.string().min(1),
   parentId: z.string().nullable().optional(),
-  description: z.string().min(5),
-  imageUrl: z.string().url().optional().or(z.literal("")),
+  description: z.string().optional().or(z.literal("")),
+  imageUrl: z.string().url().optional().or(z.literal("")).or(z.null()),
   sortOrder: z.coerce.number().min(0).default(1)
 });
 
@@ -22,7 +22,11 @@ export async function POST(request: Request) {
 
   const parsed = categorySchema.safeParse(await request.json().catch(() => null));
   if (!parsed.success) {
-    return NextResponse.json({ error: "Invalid category payload" }, { status: 400 });
+    console.error("Category validation error:", parsed.error.flatten());
+    return NextResponse.json(
+      { error: "Invalid category payload", details: parsed.error.flatten().fieldErrors },
+      { status: 400 }
+    );
   }
 
   if (session.demo) {
