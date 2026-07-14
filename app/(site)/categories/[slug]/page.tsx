@@ -9,8 +9,9 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
+  const normalizedSlug = slug.replace(/_/g, "-");
   const categories = await getAllCategories();
-  const category = categories.find((item) => item.slug === slug);
+  const category = categories.find((item) => item.slug === normalizedSlug);
   return {
     title: category?.name || "Category",
     description: category?.description
@@ -19,8 +20,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function CategoryDetailsPage({ params }: PageProps) {
   const { slug } = await params;
+  const normalizedSlug = slug.replace(/_/g, "-");
   const categories = await getAllCategories();
-  const category = categories.find((item) => item.slug === slug);
+  const category = categories.find((item) => item.slug === normalizedSlug);
 
   if (!category) {
     notFound();

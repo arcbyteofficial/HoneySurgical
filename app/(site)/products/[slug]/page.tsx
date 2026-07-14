@@ -20,7 +20,8 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const product = await getProductBySlug(slug);
+  const normalizedSlug = slug.replace(/_/g, "-");
+  const product = await getProductBySlug(normalizedSlug);
   if (!product) {
     return { title: "Product Not Found" };
   }
@@ -38,7 +39,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ProductDetailsPage({ params }: PageProps) {
   const { slug } = await params;
-  const product = await getProductBySlug(slug);
+  const normalizedSlug = slug.replace(/_/g, "-");
+  const product = await getProductBySlug(normalizedSlug);
 
   if (!product) {
     notFound();

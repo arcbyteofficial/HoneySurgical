@@ -153,8 +153,9 @@ export async function searchProducts(
     }
 
     if (filters.category) {
+      const categorySlug = filters.category.replace(/_/g, "-");
       const allCategories = await getAllCategories();
-      const category = allCategories.find((item) => item.slug === filters.category);
+      const category = allCategories.find((item) => item.slug === categorySlug);
       if (category) {
         const childIds = allCategories
           .filter((item) => item.parentId === category.id)
@@ -164,7 +165,8 @@ export async function searchProducts(
     }
 
     if (filters.brand) {
-      const brand = await BrandModel.findOne({ slug: filters.brand }).lean();
+      const brandSlug = filters.brand.replace(/_/g, "-");
+      const brand = await BrandModel.findOne({ slug: brandSlug }).lean();
       if (brand) {
         query.brand = brand._id;
       }
