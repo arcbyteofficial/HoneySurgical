@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BarChart3, Boxes, FolderTree, Inbox, LayoutDashboard, Upload } from "lucide-react";
+import { BarChart3, Boxes, FolderTree, Inbox, LayoutDashboard, Tag, Upload } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import type { AdminSession } from "@/lib/auth/admin";
 
@@ -7,6 +7,7 @@ const adminNav = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/products", label: "Products", icon: Boxes },
   { href: "/admin/categories", label: "Categories", icon: FolderTree },
+  { href: "/admin/brands", label: "Brands", icon: Tag },
   { href: "/admin/inquiries", label: "Inquiries", icon: Inbox },
   { href: "/admin/bulk-upload", label: "Bulk Upload", icon: Upload },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 }

@@ -49,9 +49,13 @@ export async function getAllCategories(): Promise<Category[]> {
     return categories.map(c => {
       const cat = c as any;
       return {
-        ...cat,
         id: cat._id.toString(),
+        name: cat.name,
+        slug: cat.slug,
+        description: cat.description || "",
+        imageUrl: cat.imageUrl || "",
         parentId: cat.parentId ? cat.parentId.toString() : null,
+        sortOrder: cat.sortOrder || 0,
       } as Category;
     });
   } catch (error) {
@@ -75,7 +79,11 @@ export async function getAllBrands(): Promise<Brand[]> {
     const brands = await BrandModel.find().sort({ name: 1 }).lean();
     return brands.map(b => {
       const brand = b as any;
-      return { ...brand, id: brand._id.toString() } as Brand;
+      return {
+        id: brand._id.toString(),
+        name: brand.name,
+        slug: brand.slug,
+      } as Brand;
     });
   } catch (error) {
     return fallbackBrands;
