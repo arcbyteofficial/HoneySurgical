@@ -55,6 +55,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1
     }
+  },
+  verification: {
+    google: "ALl1azafZKncA2ovOLvObQlEyw3jE6OQTEq_VllwwtQ"
   }
 };
 
