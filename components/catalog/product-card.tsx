@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MessageCircle, Scale } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CompareToggle } from "@/components/catalog/compare-toggle";
 import type { Product } from "@/lib/types/catalog";
 import { siteConfig } from "@/lib/config/site";
 import { formatCurrency } from "@/lib/utils";
@@ -15,8 +14,8 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <article className="group/card relative flex flex-col overflow-hidden rounded-xl border border-border/50 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.08)]">
-      {/* Aspect Square Image container with scaling */}
-      <div className="relative aspect-square w-full overflow-hidden bg-medical-grey/50">
+      {/* Aspect ratio 4/3 Image container with scaling */}
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-medical-grey/50">
         <Link 
           href={`/products/${product.slug}`} 
           className="block h-full w-full focus-ring"
@@ -39,13 +38,6 @@ export function ProductCard({ product }: { product: Product }) {
             </div>
           )}
         </Link>
-        
-        {/* Comparison toggle badge overlay */}
-        <div className="absolute right-2.5 top-2.5 z-10 opacity-90 transition-opacity hover:opacity-100">
-          <CompareToggle productSlug={product.slug} productName={product.name}>
-            <Scale className="size-4" aria-hidden="true" />
-          </CompareToggle>
-        </div>
       </div>
 
       {/* Content details and actions layout */}
