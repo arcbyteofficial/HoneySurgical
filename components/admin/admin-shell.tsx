@@ -94,7 +94,7 @@ export function AdminShell({ session, children }: { session: AdminSession; child
   return (
     <section className="bg-background min-h-[calc(100vh-8rem)]">
       {/* Mobile Top Navigation Bar */}
-      <div className="lg:hidden sticky top-16 z-30 flex items-center justify-between border-b border-border/80 bg-white/95 backdrop-blur px-4 py-3 shadow-sm">
+      <div className="lg:hidden sticky top-0 z-30 flex items-center justify-between border-b border-border/80 bg-white/95 backdrop-blur px-4 py-3 shadow-sm">
         <div className="flex items-center gap-3">
           <button
             onClick={() => setIsOpen(true)}
@@ -134,7 +134,7 @@ export function AdminShell({ session, children }: { session: AdminSession; child
       <div className="container py-6 lg:py-8">
         <div className="grid gap-8 lg:grid-cols-[240px_1fr]">
           {/* Permanent Desktop Sidebar */}
-          <aside className="hidden lg:block rounded-xl border border-border bg-white p-4 shadow-sm h-fit sticky top-24">
+          <aside className="hidden lg:block rounded-xl border border-border bg-white p-4 shadow-sm h-fit sticky top-6">
             <SidebarContent />
           </aside>
 
