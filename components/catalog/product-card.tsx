@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MessageCircle, Scale } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CompareToggle } from "@/components/catalog/compare-toggle";
 import type { Product } from "@/lib/types/catalog";
@@ -11,68 +10,109 @@ import { formatCurrency } from "@/lib/utils";
 export function ProductCard({ product }: { product: Product }) {
   const image = product.images[0];
   const whatsappText = encodeURIComponent(
-    `Hello HONEY SURGICALS, I would like information regarding ${product.name}`
+    `Hello HONEY SURGICALS, I am interested in sourcing "${product.name}" (SKU: ${product.sku}). Please share availability and bulk pricing for institutional procurement.`
   );
 
   return (
-    <article className="grid overflow-hidden rounded-lg border border-border bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
-      <div className="relative aspect-[4/3] overflow-hidden bg-secondary">
-        <Link href={`/products/${product.slug}`} className="group block h-full w-full focus-ring">
+    <article className="group/card relative flex flex-col overflow-hidden rounded-xl border border-border/50 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(0,0,0,0.08)]">
+      {/* Aspect Square Image container with scaling */}
+      <div className="relative aspect-square w-full overflow-hidden bg-medical-grey/50">
+        <Link 
+          href={`/products/${product.slug}`} 
+          className="block h-full w-full focus-ring"
+          tabIndex={-1}
+          aria-hidden="true"
+        >
           {image ? (
             <Image
               src={image.url}
-              alt={image.alt}
+              alt={image.alt || product.name}
               fill
-              sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 100vw"
-              className="object-cover transition duration-300 group-hover:scale-105"
+              sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
+              className="object-contain p-4 transition-transform duration-500 ease-out group-hover/card:scale-105"
             />
-          ) : null}
+          ) : (
+            <div className="flex h-full w-full items-center justify-center text-muted-foreground/30">
+              <svg className="size-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+          )}
         </Link>
-        <div className="absolute right-2 top-2 z-10">
+        
+        {/* Comparison toggle badge overlay */}
+        <div className="absolute right-2.5 top-2.5 z-10 opacity-90 transition-opacity hover:opacity-100">
           <CompareToggle productSlug={product.slug} productName={product.name}>
-            <Scale aria-hidden="true" />
+            <Scale className="size-4" aria-hidden="true" />
           </CompareToggle>
         </div>
       </div>
-      <div className="grid gap-3 p-3 sm:gap-4 sm:p-4">
-        <div className="min-w-0">
-          <Badge variant="beige" className="mb-2">
-            {product.category.name}
-          </Badge>
-          <Link href={`/products/${product.slug}`} className="focus-ring">
-            <h3 className="line-clamp-2 min-h-10 text-sm font-semibold leading-5 sm:min-h-12 sm:text-base sm:leading-6">
-              {product.name}
-            </h3>
-          </Link>
-          <p className="mt-1 text-[10px] text-muted-foreground sm:text-xs">{product.sku}</p>
+
+      {/* Content details and actions layout */}
+      <div className="flex flex-1 flex-col p-4">
+        {/* Brand & SKU info row */}
+        <div className="flex items-center justify-between gap-2 mb-1.5">
+          <span className="text-[10px] font-semibold text-muted-foreground/80 uppercase tracking-wider truncate max-w-[60%]">
+            {product.brand.name}
+          </span>
+          <span className="font-mono text-[9px] text-muted-foreground/60 select-all">
+            {product.sku}
+          </span>
         </div>
-        <p className="hidden sm:line-clamp-2 sm:min-h-11 sm:text-sm sm:leading-6 sm:text-muted-foreground">
+
+        {/* Title link */}
+        <Link href={`/products/${product.slug}`} className="focus-ring mb-2 group/title">
+          <h3 className="line-clamp-2 min-h-[2.5rem] text-sm font-semibold text-medical-deep leading-tight group-hover/title:text-medical-blue transition-colors">
+            {product.name}
+          </h3>
+        </Link>
+
+        {/* Short Description */}
+        <p className="line-clamp-2 min-h-[2rem] text-xs text-muted-foreground leading-normal mb-4">
           {product.shortDescription}
         </p>
-        <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
-          <span className="text-sm font-bold text-medical-deep sm:text-base">{formatCurrency(product.price)}</span>
-          <span className="text-[10px] text-muted-foreground sm:text-xs">{product.brand.name}</span>
-        </div>
-        <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2 sm:gap-2">
-          <Button
-            asChild
-            variant="outline"
-            className="h-8 px-2 text-xs sm:h-9 sm:px-3 sm:text-sm"
-          >
-            <a href={`https://wa.me/${siteConfig.whatsapp}?text=${whatsappText}`} target="_blank" rel="noreferrer">
-              <MessageCircle className="size-3.5 sm:size-4" aria-hidden="true" />
-              WhatsApp
-            </a>
-          </Button>
-          <Button
-            asChild
-            className="h-8 px-2 text-xs sm:h-9 sm:px-3 sm:text-sm"
-          >
-            <Link href={`/products/${product.slug}#inquiry`}>
-              Quote
-              <ArrowRight className="size-3.5 sm:size-4" aria-hidden="true" />
-            </Link>
-          </Button>
+
+        {/* Bottom row layout - Price and CTAs */}
+        <div className="mt-auto pt-3 border-t border-border/40 flex flex-col gap-3">
+          <div className="flex items-baseline gap-1">
+            <span className="text-[10px] text-muted-foreground font-medium uppercase tracking-wider">MSRP</span>
+            <span className="text-base font-bold text-medical-deep font-mono tracking-tight tabular-nums">
+              {formatCurrency(product.price)}
+            </span>
+          </div>
+
+          {/* Action layout */}
+          <div className="grid grid-cols-2 gap-2">
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="h-9 w-full justify-center text-xs font-semibold border-border/80 text-foreground hover:bg-medical-bluePale/20 hover:text-medical-blue hover:border-medical-blue/30"
+            >
+              <a
+                href={`https://wa.me/${siteConfig.whatsapp}?text=${whatsappText}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Inquire about ${product.name} on WhatsApp`}
+              >
+                <MessageCircle className="size-3.5 mr-1.5 text-medical-green" aria-hidden="true" />
+                WhatsApp
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="sm"
+              className="h-9 w-full justify-center text-xs font-semibold bg-medical-deep text-white hover:bg-medical-deep/90"
+            >
+              <Link
+                href={`/products/${product.slug}#inquiry`}
+                aria-label={`Request quote for ${product.name}`}
+              >
+                Quote
+                <ArrowRight className="size-3.5 ml-1.5" aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </article>

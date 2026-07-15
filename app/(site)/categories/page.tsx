@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { CategoryCard } from "@/components/catalog/category-card";
 import { getCategoryTree } from "@/lib/repositories/catalog-repository";
 import { BreadcrumbsJsonLd } from "@/components/seo/json-ld";
@@ -31,10 +33,22 @@ export default async function CategoriesPage() {
             rehabilitation, and infection control procurement.
           </p>
         </div>
-        <div className="grid gap-6">
+        <div className="grid gap-10">
           {categories.map((category) => (
-            <section key={category.id} className="grid gap-4">
-              <CategoryCard category={category} />
+            <section key={category.id} className="grid gap-5 border-b border-border/50 pb-8 last:border-0 last:pb-0">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <h2 className="text-xl font-bold text-medical-deep sm:text-2xl">{category.name}</h2>
+                  <p className="mt-1 text-sm text-muted-foreground">{category.description}</p>
+                </div>
+                <Link
+                  href={`/categories/${category.slug}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-medical-deep transition-colors shrink-0 focus-ring"
+                >
+                  View all products
+                  <ArrowRight className="size-4" aria-hidden="true" />
+                </Link>
+              </div>
               {category.children?.length ? (
                 <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
                   {category.children.map((child) => (
