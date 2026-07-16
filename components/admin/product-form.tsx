@@ -124,6 +124,7 @@ export function ProductForm({
       features: formData.get("features"),
       keywords: formData.get("keywords"),
       status: formData.get("status"),
+      extraChargesApply: formData.get("extraChargesApply") === "on",
       images,
     };
 
@@ -384,6 +385,24 @@ export function ProductForm({
             ))}
           </div>
         ) : null}
+      </div>
+
+      <div className="flex items-start gap-2.5 rounded-lg border border-border bg-medical-bluePale/5 p-4 shadow-sm">
+        <input
+          type="checkbox"
+          id="extraChargesApply"
+          name="extraChargesApply"
+          defaultChecked={product?.extraChargesApply ?? false}
+          className="mt-1 size-4 rounded border-gray-300 text-medical-deep focus:ring-medical-deep cursor-pointer"
+        />
+        <div className="grid gap-1">
+          <Label htmlFor="extraChargesApply" className="font-semibold text-medical-deep text-sm cursor-pointer select-none">
+            Transport, Tax & other charges apply extra
+          </Label>
+          <p className="text-xs text-muted-foreground leading-relaxed select-none">
+            If checked, buyers will see that transport and tax are additional. Unchecked means the price is a net inclusive rate.
+          </p>
+        </div>
       </div>
 
       <div className="grid gap-2 md:w-56">

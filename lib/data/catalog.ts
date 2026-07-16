@@ -384,6 +384,7 @@ export const products: Product[] = productSeeds.map((seed) => {
     brand: findBrand(seed.brand),
     category: findCategory(seed.category),
     price: seed.price,
+    extraChargesApply: false,
     shortDescription: seed.shortDescription,
     description: `${seed.shortDescription} HONEY SURGICALS supplies this product for institutional procurement with reliable sourcing, documentation support, and sales assistance for bulk requirements.`,
     specifications: seed.specifications.map(([label, value]) => ({ label, value })),

@@ -84,7 +84,16 @@ export function ComparisonClient({ products }: { products: Product[] }) {
             <TableRow>
               <TableCell className="font-semibold">Price</TableCell>
               {selected.map((product) => (
-                <TableCell key={product.id}>{formatCurrency(product.price)}</TableCell>
+                <TableCell key={product.id}>
+                  <div>
+                    <span className="font-mono">{formatCurrency(product.price)}</span>
+                    <span className="block text-[10px] text-muted-foreground leading-tight mt-0.5 font-sans">
+                      {product.extraChargesApply
+                        ? "+ Transport & Tax"
+                        : "Net Rate (Inclusive)"}
+                    </span>
+                  </div>
+                </TableCell>
               ))}
             </TableRow>
             <TableRow>

@@ -41,6 +41,7 @@ export type Product = {
   brand: Brand;
   category: Category;
   price: number | null;
+  extraChargesApply: boolean;
   shortDescription: string;
   description: string;
   specifications: ProductSpecification[];

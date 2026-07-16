@@ -101,6 +101,7 @@ async function main() {
       brand: brandId || null,
       category: catId || null,
       price: prod.price,
+      extraChargesApply: prod.extraChargesApply,
       shortDescription: prod.shortDescription,
       description: prod.description,
       specifications: prod.specifications,

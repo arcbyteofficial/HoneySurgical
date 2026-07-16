@@ -119,7 +119,14 @@ export default async function ProductDetailsPage({ params }: PageProps) {
               </div>
               <div>
                 <span className="text-xs uppercase tracking-normal text-muted-foreground">Price</span>
-                <p className="font-semibold text-medical-deep">{formatCurrency(product.price)}</p>
+                <div className="font-semibold text-medical-deep">
+                  {formatCurrency(product.price)}
+                  <span className="block text-[11px] font-medium text-muted-foreground leading-tight mt-0.5">
+                    {product.extraChargesApply
+                      ? "+ Transport, Tax & other charges"
+                      : "Net Rate (Inclusive)"}
+                  </span>
+                </div>
               </div>
               <div>
                 <span className="text-xs uppercase tracking-normal text-muted-foreground">Category</span>

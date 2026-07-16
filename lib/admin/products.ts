@@ -27,6 +27,7 @@ export const productSchema = z.object({
   keywords: z.string().optional(),
   status: z.enum(productStatusValues).default("active"),
   images: z.array(z.string()).default([]),
+  extraChargesApply: z.boolean().default(false),
 });
 
 export type ProductPayload = z.infer<typeof productSchema>;
@@ -38,6 +39,7 @@ export type ProductRecord = {
   category: mongoose.Types.ObjectId;
   brand: mongoose.Types.ObjectId;
   price: number | null;
+  extraChargesApply: boolean;
   shortDescription: string;
   description: string;
   specifications: { label: string; value: string }[];
@@ -128,6 +130,7 @@ export function normalizeProductPayload(
       category: new mongoose.Types.ObjectId(product.categoryId),
       brand: new mongoose.Types.ObjectId(product.brandId),
       price: product.price,
+      extraChargesApply: product.extraChargesApply,
       shortDescription: product.shortDescription,
       description: product.description,
       specifications: specifications.value,

@@ -73,7 +73,7 @@ export function SearchBox({ products, large = false }: { products: Product[]; la
                 <span className="min-w-0">
                   <span className="block truncate text-sm font-semibold">{product.name}</span>
                   <span className="mt-1 block truncate text-xs text-muted-foreground">
-                    {product.sku} - {product.category.name} - {formatCurrency(product.price)}
+                    {product.sku} - {product.category.name} - {formatCurrency(product.price)} {product.extraChargesApply ? "(+ Transport & Tax)" : "(Net)"}
                   </span>
                 </span>
               </Link>

@@ -21,6 +21,7 @@ export interface IProduct extends Document {
   brand: mongoose.Types.ObjectId | IBrand;
   category: mongoose.Types.ObjectId | ICategory;
   price: number | null;
+  extraChargesApply: boolean;
   shortDescription: string;
   description: string;
   specifications: IProductSpecification[];
@@ -59,6 +60,7 @@ const ProductSchema: Schema<IProduct> = new Schema(
     brand: { type: Schema.Types.ObjectId, ref: "Brand", required: true },
     category: { type: Schema.Types.ObjectId, ref: "Category", required: true },
     price: { type: Number, default: null },
+    extraChargesApply: { type: Boolean, default: false },
     shortDescription: { type: String, default: "" },
     description: { type: String, default: "" },
     specifications: [ProductSpecificationSchema],

@@ -66,10 +66,17 @@ export function ProductCard({ product }: { product: Product }) {
 
         {/* Bottom row layout - Price and CTAs */}
         <div className="mt-auto pt-3 border-t border-border/40 flex flex-col gap-3">
-          <div className="flex items-baseline gap-1">
-            <span className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider sm:text-[10px]">MSRP</span>
-            <span className="text-sm font-bold text-medical-deep font-mono tracking-tight tabular-nums sm:text-base">
-              {formatCurrency(product.price)}
+          <div className="flex flex-col gap-0.5">
+            <div className="flex items-baseline gap-1">
+              <span className="text-[9px] text-muted-foreground font-medium uppercase tracking-wider sm:text-[10px]">MSRP</span>
+              <span className="text-sm font-bold text-medical-deep font-mono tracking-tight tabular-nums sm:text-base">
+                {formatCurrency(product.price)}
+              </span>
+            </div>
+            <span className="text-[9px] font-medium text-muted-foreground leading-none">
+              {product.extraChargesApply
+                ? "+ Transport & Tax"
+                : "Net Rate (Inclusive)"}
             </span>
           </div>
 
