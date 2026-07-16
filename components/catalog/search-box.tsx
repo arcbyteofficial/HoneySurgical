@@ -16,7 +16,7 @@ export function SearchBox({ products, large = false }: { products: Product[]; la
   const normalized = normalizeSearch(query);
 
   const matches = useMemo(() => {
-    if (normalized.length < 2) {
+    if (normalized.length < 1) {
       return [];
     }
 
