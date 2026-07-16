@@ -30,6 +30,8 @@ async function connectToDatabase() {
     };
 
     cached.promise = mongoose.connect(MONGODB_URI!, opts).then((mongoose) => {
+      const maskedUri = MONGODB_URI?.replace(/:([^:@]{4,})@/, ":***@");
+      console.log("Mongoose connected to database:", mongoose.connection.name, "at URI:", maskedUri);
       return mongoose;
     });
   }

@@ -58,6 +58,12 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true });
   } catch (error: any) {
+    if (error.code === 11000) {
+      return NextResponse.json(
+        { error: "A template with this name already exists. Please choose a unique name." },
+        { status: 400 }
+      );
+    }
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
