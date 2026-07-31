@@ -25,6 +25,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.8
     },
+    {
+      url: `${siteConfig.url}/contact`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7
+    },
+    {
+      url: `${siteConfig.url}/compare`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5
+    },
     ...categories.map((category) => ({
       url: `${siteConfig.url}/categories/${category.slug}`,
       lastModified: now,
@@ -33,9 +45,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...products.map((product) => ({
       url: `${siteConfig.url}/products/${product.slug}`,
-      lastModified: new Date(product.updatedAt),
+      lastModified: product.updatedAt ? new Date(product.updatedAt) : now,
       changeFrequency: "weekly" as const,
-      priority: 0.75
+      priority: 0.8
     }))
   ];
 }

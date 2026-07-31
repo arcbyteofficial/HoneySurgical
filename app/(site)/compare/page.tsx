@@ -4,8 +4,11 @@ import { ComparisonClient } from "@/components/catalog/comparison-client";
 import { searchProducts } from "@/lib/repositories/catalog-repository";
 
 export const metadata: Metadata = {
-  title: "Compare Products",
-  description: "Compare product specifications, features, and prices."
+  title: "Compare Products | HONEY SURGICALS",
+  description: "Compare medical disposables, surgical instruments, and hospital equipment side-by-side by specifications, brand, and pricing.",
+  alternates: {
+    canonical: "/compare"
+  }
 };
 
 export default async function ComparePage() {

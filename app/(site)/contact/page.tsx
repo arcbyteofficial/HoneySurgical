@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/config/site";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contact HONEY SURGICALS for surgical product quotes and procurement support."
+  title: "Contact HONEY SURGICALS | Medical & Surgical Sourcing",
+  description: "Contact HONEY SURGICALS for surgical product quotes, wholesale catalog inquiries, and institutional procurement support.",
+  alternates: {
+    canonical: "/contact"
+  }
 };
 
 export default function ContactPage() {

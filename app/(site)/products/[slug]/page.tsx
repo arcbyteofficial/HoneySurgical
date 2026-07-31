@@ -8,8 +8,10 @@ import { InquiryForm } from "@/components/catalog/inquiry-form";
 import { ProductCard } from "@/components/catalog/product-card";
 import { ProductGallery } from "@/components/catalog/product-gallery";
 import {
+  getAllCategories,
   getProductBySlug,
-  getRelatedProducts
+  getRelatedProducts,
+  searchProducts
 } from "@/lib/repositories/catalog-repository";
 import { siteConfig } from "@/lib/config/site";
 import { formatCurrency } from "@/lib/utils";
@@ -19,6 +21,13 @@ import { ProductDetailCompare } from "@/components/catalog/compare-toggle";
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateStaticParams() {
+  const products = await searchProducts();
+  return products.map((product) => ({
+    slug: product.slug
+  }));
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
