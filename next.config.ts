@@ -16,6 +16,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/category/:slug*",
+        destination: "/categories/:slug*",
+        permanent: true
+      },
+      {
+        source: "/product/:slug*",
+        destination: "/products/:slug*",
+        permanent: true
+      }
+    ];
+  },
   typedRoutes: false,
 };
 
