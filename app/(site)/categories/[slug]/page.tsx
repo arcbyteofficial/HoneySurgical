@@ -14,10 +14,14 @@ type PageProps = {
 };
 
 export async function generateStaticParams() {
-  const categories = await getAllCategories();
-  return categories.map((category) => ({
-    slug: category.slug
-  }));
+  try {
+    const categories = await getAllCategories();
+    return (categories || []).map((category) => ({
+      slug: category.slug
+    }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

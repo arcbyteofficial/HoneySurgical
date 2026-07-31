@@ -23,10 +23,14 @@ type PageProps = {
 };
 
 export async function generateStaticParams() {
-  const products = await searchProducts();
-  return products.map((product) => ({
-    slug: product.slug
-  }));
+  try {
+    const products = await searchProducts();
+    return (products || []).map((product) => ({
+      slug: product.slug
+    }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
