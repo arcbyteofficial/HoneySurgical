@@ -8,6 +8,7 @@ import {
   getRelatedProducts as getFallbackRelatedProducts,
   products as fallbackProducts,
   searchProducts as fallbackSearchProducts,
+  templates as fallbackTemplates,
 } from "@/lib/data/catalog";
 import connectToDatabase from "@/lib/db/mongodb";
 import { Category as CategoryModel } from "@/lib/models/Category";
@@ -328,9 +329,12 @@ export async function getAllTemplates(): Promise<ProductTemplate[]> {
   try {
     await connectToDatabase();
     const templates = await ProductTemplateModel.find().sort({ name: 1 }).lean();
+    if (!templates || templates.length === 0) {
+      return fallbackTemplates;
+    }
     return templates.map((t) => serializeDoc<ProductTemplate>(t));
   } catch (error) {
     console.error("Error fetching templates:", error);
-    return [];
+    return fallbackTemplates;
   }
 }

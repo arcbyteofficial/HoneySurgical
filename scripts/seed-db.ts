@@ -1,10 +1,11 @@
 import fs from "fs";
 import path from "path";
 import mongoose from "mongoose";
-import { categories as seedCategories, brands as seedBrands, products as seedProducts } from "../lib/data/catalog";
+import { categories as seedCategories, brands as seedBrands, products as seedProducts, templates as seedTemplates } from "../lib/data/catalog";
 import { Category as CategoryModel } from "../lib/models/Category";
 import { Brand as BrandModel } from "../lib/models/Brand";
 import { Product as ProductModel } from "../lib/models/Product";
+import { ProductTemplate as ProductTemplateModel } from "../lib/models/ProductTemplate";
 
 // Load .env.local
 const envLocalPath = path.resolve(process.cwd(), ".env.local");
@@ -30,12 +31,13 @@ async function main() {
   await mongoose.connect(MONGODB_URI);
   console.log("Connected successfully.");
 
-  // 1. Clear existing brands, categories, products
+  // 1. Clear existing brands, categories, products, templates
   console.log("Clearing existing collections...");
   await Promise.all([
     BrandModel.deleteMany({}),
     CategoryModel.deleteMany({}),
     ProductModel.deleteMany({}),
+    ProductTemplateModel.deleteMany({}),
   ]);
   console.log("Collections cleared.");
 
@@ -116,6 +118,22 @@ async function main() {
   console.log("Inserting products...");
   await ProductModel.insertMany(productsToInsert);
   console.log("Products seeded successfully.");
+
+  // 5. Seed Templates
+  console.log(`Mapping ${seedTemplates.length} product templates...`);
+  const templatesToInsert = seedTemplates.map((tmpl) => ({
+    name: tmpl.name,
+    slug: tmpl.slug,
+    shortDescription: tmpl.shortDescription,
+    description: tmpl.description,
+    specifications: tmpl.specifications,
+    features: tmpl.features,
+    keywords: tmpl.keywords,
+  }));
+
+  console.log("Inserting product templates...");
+  await ProductTemplateModel.insertMany(templatesToInsert);
+  console.log("Product templates seeded successfully.");
 
   console.log("Database seeding completed successfully!");
 }
