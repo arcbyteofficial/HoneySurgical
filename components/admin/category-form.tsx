@@ -344,8 +344,9 @@ export function CategoryForm({ categories }: { categories: Category[] }) {
                     </div>
                   </TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
+              ))
+            )}
+          </TableBody>
           </Table>
         </div>
       </div>
