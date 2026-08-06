@@ -24,8 +24,20 @@ export function CategoryForm({ categories }: { categories: Category[] }) {
   const [editingCategory, setEditingCategory] = useState<Category | null>(null);
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const byId = new Map(categories.map((category) => [category.id, category]));
+
+  const filteredCategories = categories.filter((cat) => {
+    const q = searchQuery.toLowerCase().trim();
+    if (!q) return true;
+    const parentName = cat.parentId ? byId.get(cat.parentId)?.name.toLowerCase() || "" : "";
+    return (
+      cat.name.toLowerCase().includes(q) ||
+      cat.slug.toLowerCase().includes(q) ||
+      parentName.includes(q)
+    );
+  });
 
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -194,64 +206,86 @@ export function CategoryForm({ categories }: { categories: Category[] }) {
       </form>
 
       <div className="rounded-lg border border-border bg-white p-5 shadow-sm">
-        <h2 className="font-semibold text-lg text-medical-deep mb-4">Categories</h2>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+          <div className="flex items-center gap-2">
+            <h2 className="font-semibold text-lg text-medical-deep">Categories</h2>
+            <Badge variant="secondary" className="text-xs">
+              {filteredCategories.length} {filteredCategories.length === 1 ? "category" : "categories"}
+            </Badge>
+          </div>
+          <div className="w-full sm:w-64">
+            <Input
+              type="search"
+              placeholder="Search categories..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="h-9 text-xs"
+            />
+          </div>
+        </div>
         
         {/* Mobile Card List View */}
         <div className="grid gap-4 md:hidden">
-          {categories.map((category) => (
-            <div 
-              key={category.id} 
-              className="flex flex-col gap-2 rounded-xl border border-border/80 bg-medical-bluePale/5 p-4 shadow-sm"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <span className="font-bold text-sm text-medical-deep leading-tight">
-                  {category.parentId ? "↳ " : ""}
-                  {category.name}
-                </span>
-                <span className="shrink-0">
-                  {category.parentId ? (
-                    <Badge variant="secondary" className="text-[10px]">{byId.get(category.parentId)?.name}</Badge>
-                  ) : (
-                    <Badge variant="beige" className="text-[10px] bg-medical-bluePale/30 text-medical-deep border border-medical-blue/20">Top level</Badge>
-                  )}
-                </span>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2 text-xs border-t border-border/40 pt-2.5 mt-1">
-                <div>
-                  <span className="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold mb-0.5">Slug</span>
-                  <span className="font-mono text-muted-foreground select-all text-[11px]">{category.slug}</span>
-                </div>
-                <div>
-                  <span className="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold mb-0.5">Sort Order</span>
-                  <span className="font-semibold text-foreground font-mono">{category.sortOrder}</span>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-end gap-2 border-t border-border/40 pt-2 mt-1">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  aria-label={`Edit ${category.name}`}
-                  onClick={() => setEditingCategory(category)}
-                  className="h-8 text-xs gap-1.5"
-                >
-                  <Pencil aria-hidden="true" className="size-3.5" />
-                  Edit
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  aria-label={`Delete ${category.name}`}
-                  onClick={() => remove(category)}
-                  className="h-8 text-xs gap-1.5 text-destructive hover:bg-destructive/10"
-                >
-                  <Trash2 aria-hidden="true" className="size-3.5" />
-                  Delete
-                </Button>
-              </div>
+          {filteredCategories.length === 0 ? (
+            <div className="py-8 text-center text-muted-foreground border border-dashed rounded-xl bg-white text-sm">
+              No categories matching "{searchQuery}".
             </div>
-          ))}
+          ) : (
+            filteredCategories.map((category) => (
+              <div 
+                key={category.id} 
+                className="flex flex-col gap-2 rounded-xl border border-border/80 bg-medical-bluePale/5 p-4 shadow-sm"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <span className="font-bold text-sm text-medical-deep leading-tight">
+                    {category.parentId ? "↳ " : ""}
+                    {category.name}
+                  </span>
+                  <span className="shrink-0">
+                    {category.parentId ? (
+                      <Badge variant="secondary" className="text-[10px]">{byId.get(category.parentId)?.name}</Badge>
+                    ) : (
+                      <Badge variant="beige" className="text-[10px] bg-medical-bluePale/30 text-medical-deep border border-medical-blue/20">Top level</Badge>
+                    )}
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 text-xs border-t border-border/40 pt-2.5 mt-1">
+                  <div>
+                    <span className="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold mb-0.5">Slug</span>
+                    <span className="font-mono text-muted-foreground select-all text-[11px]">{category.slug}</span>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] text-muted-foreground uppercase tracking-wider font-semibold mb-0.5">Sort Order</span>
+                    <span className="font-semibold text-foreground font-mono">{category.sortOrder}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-end gap-2 border-t border-border/40 pt-2 mt-1">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    aria-label={`Edit ${category.name}`}
+                    onClick={() => setEditingCategory(category)}
+                    className="h-8 text-xs gap-1.5"
+                  >
+                    <Pencil aria-hidden="true" className="size-3.5" />
+                    Edit
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    aria-label={`Delete ${category.name}`}
+                    onClick={() => remove(category)}
+                    className="h-8 text-xs gap-1.5 text-destructive hover:bg-destructive/10"
+                  >
+                    <Trash2 aria-hidden="true" className="size-3.5" />
+                    Delete
+                  </Button>
+                </div>
+              </div>
+            ))
+          )}
         </div>
 
         {/* Desktop Table View */}
@@ -267,7 +301,14 @@ export function CategoryForm({ categories }: { categories: Category[] }) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {categories.map((category) => (
+              {filteredCategories.length === 0 ? (
+                <TableRow>
+                  <TableCell colSpan={5} className="text-center text-muted-foreground py-8">
+                    No categories matching "{searchQuery}".
+                  </TableCell>
+                </TableRow>
+              ) : (
+                filteredCategories.map((category) => (
                 <TableRow key={category.id}>
                   <TableCell className="font-medium">
                     {category.parentId ? "- " : ""}

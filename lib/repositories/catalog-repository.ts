@@ -78,6 +78,9 @@ export async function getAllCategories(): Promise<Category[]> {
   try {
     await connectToDatabase();
     const categories = await CategoryModel.find().sort({ sortOrder: 1 }).lean();
+    if (!categories || categories.length === 0) {
+      return fallbackCategories;
+    }
     return categories.map(c => {
       const cat = c as any;
       return {
@@ -109,6 +112,9 @@ export async function getAllBrands(): Promise<Brand[]> {
   try {
     await connectToDatabase();
     const brands = await BrandModel.find().sort({ name: 1 }).lean();
+    if (!brands || brands.length === 0) {
+      return fallbackBrands;
+    }
     return brands.map(b => {
       const brand = b as any;
       return {
