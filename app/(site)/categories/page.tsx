@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Medical & Surgical Product Categories",
   description: "Browse our complete directory of surgical instruments, medical disposables, diagnostics, dental products, hospital furniture, and laboratory equipment.",
   alternates: {
-    canonical: "/categories"
+    canonical: `${siteConfig.url}/categories`
   }
 };
 

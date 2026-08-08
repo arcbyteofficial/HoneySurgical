@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Surgical Products Catalog & Medical Supplies",
   description: "Browse and search our wholesale catalog of medical disposables, surgical instruments, diagnostic equipment, and hospital furniture. Sourcing made simple for healthcare institutions.",
   alternates: {
-    canonical: "/products"
+    canonical: `${siteConfig.url}/products`
   }
 };
 

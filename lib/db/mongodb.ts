@@ -10,7 +10,7 @@ async function connectToDatabase() {
   const MONGODB_URI = process.env.MONGODB_URI;
 
   if (!MONGODB_URI) {
-    throw new Error("Please define the MONGODB_URI environment variable");
+    return null;
   }
 
   if (cached.conn) {
@@ -20,22 +20,28 @@ async function connectToDatabase() {
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
-      serverSelectionTimeoutMS: 2500, // Fail fast in 2.5s if DB is unreachable (e.g. during Docker build phase)
+      serverSelectionTimeoutMS: 2500, // Fail fast in 2.5s if DB is unreachable (e.g. during deployment build phase)
       connectTimeoutMS: 2500,
     };
 
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
-      const maskedUri = MONGODB_URI.replace(/:([^:@]{4,})@/, ":***@");
-      console.log("Mongoose connected to database:", mongoose.connection.name, "at URI:", maskedUri);
-      return mongoose;
-    });
+    cached.promise = mongoose
+      .connect(MONGODB_URI, opts)
+      .then((mongooseInstance) => {
+        const maskedUri = MONGODB_URI.replace(/:([^:@]{4,})@/, ":***@");
+        console.log("Mongoose connected to database:", mongooseInstance.connection.name, "at URI:", maskedUri);
+        return mongooseInstance;
+      })
+      .catch((err) => {
+        console.warn("Mongoose connection attempt failed:", err.message);
+        return null;
+      });
   }
 
   try {
     cached.conn = await cached.promise;
   } catch (e) {
     cached.promise = null;
-    throw e;
+    return null;
   }
 
   return cached.conn;

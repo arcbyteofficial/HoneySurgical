@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "HONEY SURGICALS – Premium Medical & Surgical Sourcing Catalog",
   description: "HONEY SURGICALS is a leading supplier of surgical products, hospital furniture, diagnostics, rehabilitation aids, and disposable medical supplies. Request bulk quotes online.",
   alternates: {
-    canonical: "/"
+    canonical: siteConfig.url
   }
 };
 

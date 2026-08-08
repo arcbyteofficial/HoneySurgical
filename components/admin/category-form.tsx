@@ -228,7 +228,7 @@ export function CategoryForm({ categories }: { categories: Category[] }) {
         <div className="grid gap-4 md:hidden">
           {filteredCategories.length === 0 ? (
             <div className="py-8 text-center text-muted-foreground border border-dashed rounded-xl bg-white text-sm">
-              No categories matching "{searchQuery}".
+              No categories matching &quot;{searchQuery}&quot;.
             </div>
           ) : (
             filteredCategories.map((category) => (
@@ -304,7 +304,7 @@ export function CategoryForm({ categories }: { categories: Category[] }) {
               {filteredCategories.length === 0 ? (
                 <TableRow>
                   <TableCell colSpan={5} className="text-center text-muted-foreground py-8">
-                    No categories matching "{searchQuery}".
+                    No categories matching &quot;{searchQuery}&quot;.
                   </TableCell>
                 </TableRow>
               ) : (

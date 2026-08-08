@@ -2,493 +2,991 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://honeysurgical.com</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/contact</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/compare</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/disposable-products</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/surgical-gloves</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/latex-gloves</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/nitrile-gloves</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/masks</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/syringes</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/iv-sets</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/catheters</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/cannulas</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/surgical-drapes</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/surgical-sutures</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/gauze-and-bandages</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/suction-catheters</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/urine-bags</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/sterilization-pouches</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/hospital-furniture</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/hospital-beds</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/icu-beds</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/fowler-beds</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/wheelchairs</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/stretchers</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/examination-tables</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/bedside-lockers</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/overbed-tables</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/iv-stands</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/ot-lights</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/crash-carts</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/surgical-instruments</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/forceps</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/scissors</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/retractors</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/needle-holders</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/clamps</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/surgical-sets</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/electrosurgical-units</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/laparoscopic-instruments</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/orthopedic-instruments</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/neurosurgery-instruments</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/cardiovascular-instruments</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/ophthalmic-instruments</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/ent-instruments</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/gynecological-instruments</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/diagnostics</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/stethoscopes</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/bp-monitors</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/thermometers</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/pulse-oximeters</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/glucometers</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://honeysurgical.com/categories/orthopedic-products</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://honeysurgical.com/categories/knee-braces</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://honeysurgical.com/categories/cervical-collars</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://honeysurgical.com/categories/lumbar-supports</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://honeysurgical.com/categories/walkers</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://honeysurgical.com/categories/crutches</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://honeysurgical.com/categories/medical-equipment</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/ecg-machines</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/patient-monitors</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/otoscopes</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/ultrasound-accessories</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/orthopedic-products</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/knee-braces</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/cervical-collars</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/lumbar-supports</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/walkers</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/crutches</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/splints-and-casts</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/orthopedic-implants</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/medical-equipment</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/defibrillators</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/nebulizers</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/suction-machines</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/oxygen-concentrators</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/infusion-pumps</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/syringe-pumps</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/ventilators</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/laboratory-equipment</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/microscopes</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/centrifuges</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/test-tubes</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/lab-consumables</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/micropipettes</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/autoclaves</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/blood-analyzers</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/infection-control</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/ppe-kits</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/sanitizers</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/sterilizers</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/disinfectants</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/biohazard-bags</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/uv-sterilizers</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/emergency-care</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/first-aid-kits</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/emergency-stretchers</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/ambu-bags</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/resuscitation-kits</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/trauma-bags</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/dental-products</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/dental-instruments</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/dental-chairs</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/dental-consumables</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/dental-handpieces</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/dental-scalers</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/rehabilitation-products</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/walking-sticks</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/mobility-aids</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/categories/support-devices</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/commode-chairs</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/traction-equipment</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/anesthesia-and-respiratory</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/endotracheal-tubes</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/laryngeal-masks</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/breathing-circuits</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/oxygen-masks</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/anesthesia-workstations</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/urology-and-nephrology</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/foley-catheters</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/dialysis-supplies</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/ureteral-stents</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/categories/urine-drainage-systems</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/sterile-nitrile-examination-gloves</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/3-ply-surgical-face-mask</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/romsons-iv-infusion-set</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/five-function-icu-bed</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/stainless-steel-surgical-instrument-set</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/bpl-digital-blood-pressure-monitor</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/portable-pulse-oximeter</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/adjustable-knee-brace</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/philips-oxygen-concentrator-5-lpm</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/portable-suction-machine</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/laboratory-binocular-microscope</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://honeysurgical.com/products/ppe-kit-with-face-shield</loc>
-    <lastmod>2026-07-31T12:01:28.566Z</lastmod>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/powder-free-surgical-gloves</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/n95-medical-respirator-mask</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/single-use-hypodermic-syringe-with-needle</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/sterile-precision-iv-infusion-set</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/2-way-silicone-foley-balloon-catheter</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/sterile-iv-cannula-with-port-and-wings</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/absorbable-surgical-suture-with-needle</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/general-surgical-instrument-set</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/surgical-hemostatic-forceps</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/operating-scissors-mayo-metzenbaum</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/needle-holder-with-tungsten-carbide-inserts</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/electrosurgical-cautery-generator-unit</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/laparoscopic-trocar-and-cannula-assembly</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/five-function-electric-icu-bed</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/hydraulic-operating-table</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/high-intensity-dual-head-led-ot-light</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/emergency-patient-transport-stretcher-trolley</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/multi-parameter-bedside-patient-monitor</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/12-channel-ecg-machine</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/automatic-digital-blood-pressure-monitor</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/fingertip-pulse-oximeter</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/5-lpm-portable-medical-oxygen-concentrator</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/portable-heavy-duty-electric-suction-machine</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/volumetric-infusion-pump</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/binocular-clinical-laboratory-microscope</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/high-speed-benchtop-centrifuge-machine</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/complete-personal-protective-equipment-ppe-kit</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/hospital-grade-hand-sanitizer-and-surgical-rub</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/front-loading-steam-autoclave-sterilizer</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/adjustable-knee-immobilizer-brace</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/soft-foam-cervical-collar</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/manual-folding-wheelchair</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/adult-manual-resuscitation-ambu-bag-set</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/cuffed-endotracheal-tube</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/dental-ultrasonic-scaler-unit</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://honeysurgical.com/products/urine-drainage-bag-with-anti-reflux-valve</loc>
+    <lastmod>2026-08-08T15:49:18.108Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

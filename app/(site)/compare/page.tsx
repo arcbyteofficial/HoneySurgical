@@ -3,11 +3,13 @@ import { Suspense } from "react";
 import { ComparisonClient } from "@/components/catalog/comparison-client";
 import { searchProducts } from "@/lib/repositories/catalog-repository";
 
+import { siteConfig } from "@/lib/config/site";
+
 export const metadata: Metadata = {
   title: "Compare Products | HONEY SURGICALS",
   description: "Compare medical disposables, surgical instruments, and hospital equipment side-by-side by specifications, brand, and pricing.",
   alternates: {
-    canonical: "/compare"
+    canonical: `${siteConfig.url}/compare`
   }
 };
 

@@ -8,34 +8,71 @@ const __dirname = path.dirname(__filename);
 const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://honeysurgical.com").replace(/\/$/, "");
 const now = new Date().toISOString();
 
-const categorySlugs = [
-  "disposable-products", "surgical-gloves", "latex-gloves", "nitrile-gloves", "masks", "syringes", "iv-sets", "catheters", "cannulas", "surgical-drapes",
-  "hospital-furniture", "hospital-beds", "icu-beds", "fowler-beds", "wheelchairs", "stretchers", "examination-tables", "bedside-lockers",
-  "surgical-instruments", "forceps", "scissors", "retractors", "needle-holders", "clamps", "surgical-sets",
-  "diagnostics", "stethoscopes", "bp-monitors", "thermometers", "pulse-oximeters", "glucometers",
-  "orthopedic-products", "knee-braces", "cervical-collars", "lumbar-supports", "walkers", "crutches",
-  "medical-equipment", "ecg-machines", "defibrillators", "nebulizers", "suction-machines", "oxygen-concentrators",
-  "laboratory-equipment", "microscopes", "centrifuges", "test-tubes", "lab-consumables",
-  "infection-control", "ppe-kits", "sanitizers", "sterilizers", "disinfectants",
-  "emergency-care", "first-aid-kits", "emergency-stretchers", "ambu-bags",
-  "dental-products", "dental-instruments", "dental-chairs", "dental-consumables",
-  "rehabilitation-products", "walking-sticks", "mobility-aids", "support-devices"
-];
+function slugify(value) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
-const productSlugs = [
-  "sterile-nitrile-examination-gloves",
-  "3-ply-surgical-face-mask",
-  "romsons-iv-infusion-set",
-  "five-function-icu-bed",
-  "stainless-steel-surgical-instrument-set",
-  "bpl-digital-blood-pressure-monitor",
-  "portable-pulse-oximeter",
-  "adjustable-knee-brace",
-  "philips-oxygen-concentrator-5-lpm",
-  "portable-suction-machine",
-  "laboratory-binocular-microscope",
-  "ppe-kit-with-face-shield"
-];
+// Read catalog.ts content dynamically
+const catalogPath = path.join(__dirname, "..", "lib", "data", "catalog.ts");
+const catalogContent = fs.readFileSync(catalogPath, "utf8");
+
+// Extract category hierarchy from catalog.ts
+const hierarchyMatch = catalogContent.match(/const hierarchy = (\{[\s\S]*?\n\};)/);
+let categorySlugs = [];
+
+if (hierarchyMatch) {
+  try {
+    const hierarchyText = hierarchyMatch[1].replace(/;\s*$/, "");
+    const hierarchyFn = new Function(`return ${hierarchyText}`);
+    const hierarchy = hierarchyFn();
+
+    const slugSet = new Set();
+    Object.entries(hierarchy).forEach(([parent, children]) => {
+      slugSet.add(slugify(parent));
+      children.forEach((child) => slugSet.add(slugify(child)));
+    });
+    categorySlugs = Array.from(slugSet);
+  } catch (err) {
+    console.error("Failed to parse hierarchy from catalog.ts:", err);
+  }
+}
+
+// Extract product names from productSeeds / templates in catalog.ts
+const productSeedsMatch = catalogContent.match(/const productSeeds = (\[[\s\S]*?\n\]) as const;/);
+let productSlugs = [];
+
+if (productSeedsMatch) {
+  try {
+    const seedsText = productSeedsMatch[1];
+    const seedsFn = new Function(`return ${seedsText}`);
+    const seeds = seedsFn();
+    productSlugs = seeds.map((s) => slugify(s.name));
+  } catch (err) {
+    console.error("Failed to parse productSeeds from catalog.ts:", err);
+  }
+}
+
+// Extract template slugs as well
+const templatesMatch = catalogContent.match(/export const templates: ProductTemplate\[\] = (\[[\s\S]*?\n\];)/);
+if (templatesMatch) {
+  try {
+    const tmplText = templatesMatch[1].replace(/;\s*$/, "");
+    const tmplFn = new Function(`return ${tmplText}`);
+    const templates = tmplFn();
+    templates.forEach((t) => {
+      if (t.slug && !productSlugs.includes(t.slug)) {
+        productSlugs.push(t.slug);
+      }
+    });
+  } catch (err) {
+    // ignore
+  }
+}
 
 const staticUrls = [
   { url: baseUrl, priority: "1.0", changefreq: "weekly" },

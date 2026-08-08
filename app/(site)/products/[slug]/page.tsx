@@ -44,17 +44,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const titleText = `${product.name} | Sourcing & Wholesale Price`;
   const descText = `${product.shortDescription || product.description}. Get bulk quotes for ${product.name} (${product.sku}). Check key specifications, brand details, and buy wholesale from HONEY SURGICALS.`;
 
+  const absoluteUrl = `${siteConfig.url}/products/${product.slug}`;
+
   return {
     title: titleText,
     description: descText,
     alternates: {
-      canonical: `/products/${product.slug}`
+      canonical: absoluteUrl
     },
     openGraph: {
       title: titleText,
       description: descText,
-      url: `${siteConfig.url}/products/${product.slug}`,
-      images: product.images[0]?.url ? [product.images[0].url] : ["/logo.jpeg"]
+      url: absoluteUrl,
+      images: product.images[0]?.url ? [product.images[0].url] : [`${siteConfig.url}/logo.jpeg`]
     }
   };
 }

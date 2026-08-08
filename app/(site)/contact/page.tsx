@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Contact HONEY SURGICALS | Medical & Surgical Sourcing",
   description: "Contact HONEY SURGICALS for surgical product quotes, wholesale catalog inquiries, and institutional procurement support.",
   alternates: {
-    canonical: "/contact"
+    canonical: `${siteConfig.url}/contact`
   }
 };
 
